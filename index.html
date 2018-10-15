@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeMirror</title>
+    <link rel="stylesheet" type="text/css" href="codeMirror/lib/codemirror.css">
+    <script src="codeMirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="codeMirror/mode/xml/xml.js"></script>
+    <script src="codeMirror/mode/clike/clike.js"></script>
+    <link href="codeMirror/theme/dracula.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="script.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
+<div style="margin-top: 50px " >
+    <b>
+        <h1>
+            WELCOME
+        </h1>
+    </b>
+</div>
+<br><br>
+<input id="editor">
+<br>
+<br>
+<button type="button" onClick="onClick()">SHOW SCREEN</button>
+<button type="button"  onClick="onSubmit()">SUBMIT</button>
+<p>Attempts : <a id="clicks">0</a></p>
+
+<script type="text/javascript">
+    var editor = CodeMirror.fromTextArea(
+        document.getElementById('editor'), {
+            backgroundColor: "#ffffff",
+            mode: "xml",
+            // theme:"dracula",
+            lineNumbers: true
+        }
+    );
+    editor.setSize("800", "600")
+    var clicks = 0;
+    var done=false;
+</script>
+</body>
+</html>
