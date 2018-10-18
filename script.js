@@ -1,12 +1,12 @@
 
 function onClick() {
-    if(clicks<numberClicks){
+    if(clicks<3){
         document.getElementsByClassName('CodeMirror')[0].style.color= 'black';
         setTimeout(function () {
             document.getElementsByClassName('CodeMirror')[0].style.color= 'white';
-        },screenTimeout)
+        },5000)
         clicks += 1;
-        document.getElementById("clicks").innerHTML =(3- clicks);
+        document.getElementById("clicks").innerHTML = clicks;
     }
 };
 function onSubmit() {
