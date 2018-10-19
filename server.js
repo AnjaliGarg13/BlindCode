@@ -10,12 +10,15 @@ const SERVER_PORT=process.env.PORT || 3333
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-app.use(session({
-    secret:'somesecretstring'
-}))
+app.set("view engine","hbs")
+
+// app.use(session({
+//     secret:'somesecretstring'
+// }))
 // app.use(passport.initialize())
 // app.use(passport.session())
 
-app.use('/',express.static(__dirname))
+app.use('/index',express.static(__dirname))
+app.use('/',require('./routes/root').route)
 
 app.listen(SERVER_PORT,()=>console.log('server started at http://localhost:3333'))
