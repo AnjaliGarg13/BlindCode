@@ -1,7 +1,7 @@
 const express =require('express')
 const path=require('path')
 const session =require('express-session')
-// const passport=require('./passport')
+const passport=require('./passport')
 
 const app=express();
 
@@ -12,13 +12,13 @@ app.use(express.urlencoded({extended:true}))
 
 app.set("view engine","hbs")
 
-// app.use(session({
-//     secret:'somesecretstring'
-// }))
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(session({
+    secret:'somesecretstring'
+}))
+app.use(passport.initialize())
+app.use(passport.session())
 
-app.use('/index',express.static(__dirname))
+app.use('/index',require('./index').route)
 app.use('/',require('./routes/root').route)
 
 app.listen(SERVER_PORT,()=>console.log('server started at http://localhost:3333'))
