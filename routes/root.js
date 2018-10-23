@@ -1,6 +1,14 @@
 const route= require('express').Router()
 const passport=require('../passport')
-const Participants=require('../db').participant
+const Users=require('../db').Users
+
+route.get('/',(req,res)=>{
+    if(req.user){
+        res.render('ind')
+    }else{
+        res.redirect('/user/signup')
+    }
+})
 
 route.get('/login',(req, res)=>{
     res.render('login')
@@ -14,12 +22,12 @@ route.post('/login',passport.authenticate('local',{
     successRedirect:'/index'
 }))
 route.post('/signup',(req,res)=>{
-    Participants.create({
+    Users.create({
         name:req.body.name,
         college: req.body.college,
         username: req.body.username,
         password: req.body.password
-    }).then((createdParticipant)=>{
+    }).then((createdUser)=>{
         res.redirect('/user/login')
     })
 })

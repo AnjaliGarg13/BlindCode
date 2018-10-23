@@ -9,7 +9,7 @@ const db=new Sequelize(
     }
 )
 
-const participant=db.define('participant',{
+const Users=db.define('users',{
     name:{
         type: Sequelize.STRING,
         allowNull:false,
@@ -31,5 +31,5 @@ const participant=db.define('participant',{
 db.sync().then(()=>console.log("Database is ready"))
 
 exports=module.exports={
-    db,participant
+    db,Users
 }

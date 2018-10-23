@@ -18,7 +18,6 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.use('/index',require('./index').route)
 app.use('/user',require('./routes/root').route)
 app.use('/',express.static(__dirname))
 
