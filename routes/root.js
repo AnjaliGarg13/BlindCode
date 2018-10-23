@@ -5,12 +5,12 @@ const Participants=require('../db').participant
 route.get('/login',(req, res)=>{
     res.render('login')
 })
-route.get('/',(req,res)=>{
+route.get('/signup',(req,res)=>{
     res.render('signup')
 })
 
 route.post('/login',passport.authenticate('local',{
-    failureRedirect:'/login',
+    failureRedirect:'/user/login',
     successRedirect:'/index'
 }))
 route.post('/signup',(req,res)=>{
@@ -20,7 +20,7 @@ route.post('/signup',(req,res)=>{
         username: req.body.username,
         password: req.body.password
     }).then((createdParticipant)=>{
-        res.redirect('/login')
+        res.redirect('/user/login')
     })
 })
 

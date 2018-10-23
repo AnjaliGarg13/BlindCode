@@ -3,9 +3,10 @@ const express =require('express')
 
 route.get('/',(req,res)=>{
     if(req.user){
-        res.render('index')
+        res.render('ind')
     }else{
-        res.redirect('/login')
+        console.log(req)
+        res.redirect('/user/login')
     }
 })
 

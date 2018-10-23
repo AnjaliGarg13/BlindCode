@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question1</title>
+
+    <link rel="stylesheet" type="text/css" href="../codeMirror/lib/codemirror.css">
+    <script src="../codeMirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../codeMirror/mode/xml/xml.js"></script>
+    <script src="../codeMirror/mode/clike/clike.js"></script>
+    <link href="../codeMirror/theme/dracula.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="hackerearth-api.js"></script>
+
+
+
+</head>
+<body>
+<div style="margin-top: 50px " >
+    <b>
+        <h1>
+            WELCOME
+        </h1>
+    </b>
+</div>
+<br><br>
+<input id="editor">
+<br>
+<br>
+<button type="button" onClick="onClick()">SHOW SCREEN</button>
+<button type="button" id="compileButton" onClick="onCompile()">Compile</button>
+<button type="button"  onClick="onSubmit()">SUBMIT</button>
+<p>Attempts : <a id="clicks">0</a></p>
+<p id="output"></p>
+
+</body>
+</html>

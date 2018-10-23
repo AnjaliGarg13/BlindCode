@@ -19,6 +19,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use('/index',require('./index').route)
-app.use('/',require('./routes/root').route)
+app.use('/user',require('./routes/root').route)
+app.use('/',express.static(__dirname))
 
 app.listen(SERVER_PORT,()=>console.log('server started at http://localhost:3333'))
