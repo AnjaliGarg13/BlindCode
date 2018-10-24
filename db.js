@@ -1,11 +1,12 @@
 const Sequelize=require('sequelize')
 
-const db=new Sequelize(
-    'BlindCodeParticipants',
-    'BlindCode',
-    'BlindCode@1',{
-        dialect:'mysql',
-        host:'localhost'
+const db=new Sequelize('sql12262485','sql12262485','FBa3GxiDZ3',{
+    host:'sql12.freemysqlhosting.net',
+    dialect:'mysql',
+    pool:{
+        min:0,
+        max:5
+    }
     }
 )
 
