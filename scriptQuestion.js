@@ -1,15 +1,3 @@
-window.onload=function () {
-    var editor = CodeMirror.fromTextArea(
-        document.getElementById('editor'),{
-            backgroundColor: "#ffffff",
-            mode: "xml",
-            // theme:"dracula",
-            lineNumbers: true
-        }
-    );
-    editor.setSize("800", "600")
-    var clicks = 0;
-    var done=false;
 
     // const hackerEarth = require('hackerearth-node')
     //
@@ -17,7 +5,7 @@ window.onload=function () {
     //     'b001908b8e0d10795a6908b8a506a4f555605090'
     // );
 
-}
+
 
 
 

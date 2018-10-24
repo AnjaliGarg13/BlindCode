@@ -4,11 +4,13 @@ const Users=require('../db').Users
 
 route.get('/',(req,res)=>{
     if(req.user){
-        res.render('ind')
+        res.render('homepage')
+
     }else{
         res.redirect('/user/signup')
     }
 })
+
 
 route.get('/login',(req, res)=>{
     res.render('login')
@@ -19,7 +21,7 @@ route.get('/signup',(req,res)=>{
 
 route.post('/login',passport.authenticate('local',{
     failureRedirect:'/user/login',
-    successRedirect:'/index'
+    successRedirect:'/user'
 }))
 route.post('/signup',(req,res)=>{
     Users.create({

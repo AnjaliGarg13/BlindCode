@@ -10,11 +10,12 @@
     <script src="../codeMirror/mode/xml/xml.js"></script>
     <script src="../codeMirror/mode/clike/clike.js"></script>
     <link href="../codeMirror/theme/dracula.css" rel="stylesheet">
-    <script src="script.js"></script>
-
+    <script src="../scriptQuestion.js"></script>
+    <!--<script src="../codeCompileRun.js"></script>-->
+    <script src="index.js"></script>
 </head>
 <body>
-<div style="margin-top: 50px " >
+<div style="margin-top: 50px ">
     <b>
         <h1>
             WELCOME
@@ -26,11 +27,14 @@
 <br>
 <br>
 <button type="button" onClick="onClick()">SHOW SCREEN</button>
-<button type="button"  onClick="onSubmit()">SUBMIT</button>
+<!--<button type="button" id="compileButton" onClick="onCompile()">Compile</button>-->
+<button type="button" id="compilebutton" >Compile2</button>
+<button type="button" onClick="onSubmit()">SUBMIT</button>
 <p>Attempts : <a id="clicks">0</a></p>
+<p id="output"></p>
+<script>
 
-<script type="text/javascript">
-    var editor = CodeMirror.fromTextArea(
+    let editor = CodeMirror.fromTextArea(
         document.getElementById('editor'), {
             backgroundColor: "#ffffff",
             mode: "xml",
@@ -39,8 +43,17 @@
         }
     );
     editor.setSize("800", "600")
-    var clicks = 0;
-    var done=false;
+    let clicks = 0;
+    let done = false;
+    // import { codeCompile } from '../codeCompileRun' ;
+    // import { codeRun } from'../codeCompileRun'
+
+    // function onCompile() {
+    //     var x=new codeCompile();
+    //     // console.log(codeCompile);
+    //     // console.log(codeRun);
+    //     // codeCompile(source=`print("hello")`, language='Python');
+    // }
 </script>
 
 </body>

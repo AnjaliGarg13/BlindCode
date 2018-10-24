@@ -10,10 +10,7 @@
     <script src="../codeMirror/mode/xml/xml.js"></script>
     <script src="../codeMirror/mode/clike/clike.js"></script>
     <link href="../codeMirror/theme/dracula.css" rel="stylesheet">
-    <script src="script.js"></script>
-    <script src="hackerearth-api.js"></script>
-
-
+    <script src="../scriptQuestion.js"></script>
 
 </head>
 <body>
@@ -29,10 +26,22 @@
 <br>
 <br>
 <button type="button" onClick="onClick()">SHOW SCREEN</button>
-<button type="button" id="compileButton" onClick="onCompile()">Compile</button>
 <button type="button"  onClick="onSubmit()">SUBMIT</button>
 <p>Attempts : <a id="clicks">0</a></p>
-<p id="output"></p>
+
+<script type="text/javascript">
+    var editor = CodeMirror.fromTextArea(
+        document.getElementById('editor'), {
+            backgroundColor: "#ffffff",
+            mode: "xml",
+            // theme:"dracula",
+            lineNumbers: true
+        }
+    );
+    editor.setSize("800", "600")
+    var clicks = 0;
+    var done=false;
+</script>
 
 </body>
 </html>
