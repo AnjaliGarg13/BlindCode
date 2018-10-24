@@ -8,12 +8,11 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../../codeMirror/lib/codemirror.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../scriptQuestion.js"></script>
     <script src="../../codeMirror/lib/codemirror.js"></script>
     <script src="../../codeMirror/mode/xml/xml.js"></script>
     <script src="../../codeMirror/mode/clike/clike.js"></script>
-    <script src="index.js"></script>
     <!--<link rel="stylesheet" type="text/css" href="../style.css">-->
-
     <style>
         .CodeMirror{
             color:white;
@@ -30,39 +29,39 @@
     </b>
     <div class="row">
         <div class="col-2"></div>
-        <div class="col-8">
-            <!--You are given n activities with their start times(Si) and finish times(Fi). Select the maximum number of activities that can be performed by a single person, assuming that a person can only work on a single activity at a particular time.-->
-            There are n events being conducted in Innovision with their start times(Si) and end times(Fi). In order to maximize his chances of winning the prizes Rishabh wants to participate in as many events as possible , assuming that he cannot leave any event in between , help him select the events (find the maximum no. of events he can participate in ).
-            <br><br><b>
-            Input Format:
+    <div class="col-8">
+        <!--You are given n activities with their start times(Si) and finish times(Fi). Select the maximum number of activities that can be performed by a single person, assuming that a person can only work on a single activity at a particular time.-->
+        There are n events being conducted in Innovision with their start times(Si) and end times(Fi). In order to maximize his chances of winning the prizes Rishabh wants to participate in as many events as possible , assuming that he cannot leave any event in between , help him select the events (find the maximum no. of events he can participate in ).
+        <br><br><b>
+        Input Format:
         </b>
-            <br>
-            The first line contains n, the number of activities. The second and third line contains the start times and the finish times of all the activities respectively.
-            <b><br><br>
-                Output format:
-            </b><br>
-            A single integer denoting the maximum number of activities that can be performed.
-            <b><br><br>
-                Constraints:
-            </b><br>
-            1<=n<=10^6<br>
-            1<=Si<=Fi<=10^6
-            <b><br><br>
-                Sample Input:
-            </b><br>
-            3<br>
-            10 12 20<br>
-            20 25 30<br>
-            <b><br><br>
-                Sample Output:
-            </b><br>
-            2<br>
-            <b><br><br>
-                Sample Explanation:
-            </b><br>
-            A person can perform at most two activities. The maximum set of activities that can be executed is {0,2} [These are indexes in start[] and finish[]]
+        <br>
+        The first line contains n, the number of activities. The second and third line contains the start times and the finish times of all the activities respectively.
+        <b><br><br>
+        Output format:
+        </b><br>
+        A single integer denoting the maximum number of activities that can be performed.
+        <b><br><br>
+        Constraints:
+        </b><br>
+        1<=n<=10^6<br>
+        1<=Si<=Fi<=10^6
+        <b><br><br>
+        Sample Input:
+        </b><br>
+        3<br>
+        10 12 20<br>
+        20 25 30<br>
+        <b><br><br>
+        Sample Output:
+        </b><br>
+        2<br>
+        <b><br><br>
+        Sample Explanation:
+        </b><br>
+        A person can perform at most two activities. The maximum set of activities that can be executed is {0,2} [These are indexes in start[] and finish[]]
 
-        </div>
+    </div>
     </div>
 </div>
 <br><br>
@@ -70,20 +69,22 @@
     <input id="editor">
     <br>
     <br>
-    <button type="button" onClick="onClick()">SHOW SCREEN</button>
     <input type="submit" value="SUBMIT">
+</form>
+<form method="post" action="/peak">
+    <input type="button" onClick="onClick()">SHOW SCREEN</input>
 </form>
 <p>Attempts : <a id="clicks">0</a></p>
 <p id="output"></p>
 <script>
 
     var editor = CodeMirror.fromTextArea(
-        document.getElementById('editor'), {
-            backgroundColor: "#ffffff",
-            mode: "xml",
-            // theme:"dracula",
-            lineNumbers: true
-        }
+            document.getElementById('editor'), {
+                backgroundColor: "#ffffff",
+                mode: "xml",
+                // theme:"dracula",
+                lineNumbers: true
+            }
     );
     editor.setSize("800", "600")
     let clicks = 0;

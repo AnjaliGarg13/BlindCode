@@ -4,8 +4,8 @@ const Users=require('../db').Users
 
 route.get('/',(req,res)=>{
     if(req.user){
+        console.log(req.user.dataValues.username)
         res.render('homepage')
-
     }else{
         res.redirect('/user/signup')
     }
