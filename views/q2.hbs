@@ -61,12 +61,13 @@
 <br><br>
             64 and 72 does not contain consecutive set bits, hence unique.
 
-
+            <br><br><br>
+            <b>PeakTime : 6 seconds</b>
         </div></div>
         </div>
 <br><br>
 <form method="post" action="/question/ques2">
-    <input id="editor">
+    <input id="editor" name="q2code">
     <br>
     <br>
     <button type="button" onClick="onClick()">SHOW SCREEN</button>
@@ -94,7 +95,7 @@
             document.getElementsByClassName('CodeMirror')[0].style.color= 'black';
             setTimeout(function () {
                 document.getElementsByClassName('CodeMirror')[0].style.color= 'white';
-            },5000)
+            },6000)
             clicks += 1;
             document.getElementById("clicks").innerHTML = clicks;
         }

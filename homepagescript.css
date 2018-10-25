@@ -21,9 +21,11 @@ html,body{
     padding-bottom: 3rem;
 }
 .card>img{
-    height:350px;
-    width: 100%;
-    object-fit: contain;
+    /*!*height:350px;*!*/
+    /*!*width: 450px;*!*/
+    /*object-fit: contain;*/
+    max-width: 100%;
+    max-height: 340px;
 }
 .padding{
     padding-bottom: 2rem;

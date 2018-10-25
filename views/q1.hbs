@@ -17,7 +17,15 @@
         .CodeMirror{
             color:white;
         }
+        /*#output_div{*/
+            /*white-space: pre-wrap;*/
+        /*}*/
     </style>
+    <!--<script>-->
+        <!--$( ".watched_textarea" ).keyup( function() {-->
+            <!--$( "#output_div" ).html( $( this ).val().replace(/\n/g, '<br />') );-->
+        <!--});-->
+    <!--</script>-->
 
 </head>
 <body>
@@ -60,19 +68,18 @@
         Sample Explanation:
         </b><br>
         A person can perform at most two activities. The maximum set of activities that can be executed is {0,2} [These are indexes in start[] and finish[]]
-
+        <br><br><br>
+        <b>PeakTime : 5 seconds</b>
     </div>
     </div>
 </div>
 <br><br>
 <form method="post" action="/question/ques1">
-    <input id="editor">
+    <input id="editor" name="q1code">
     <br>
     <br>
-    <input type="submit" value="SUBMIT">
-</form>
-<form method="post" action="/peak">
     <input type="button" onClick="onClick()">SHOW SCREEN</input>
+    <input type="submit" value="SUBMIT">
 </form>
 <p>Attempts : <a id="clicks">0</a></p>
 <p id="output"></p>
@@ -101,14 +108,14 @@
             document.getElementById("clicks").innerHTML = clicks;
         }
     };
-    function onSubmit() {
-        if(done==false){
-            done=true;
-            var code=editor.getValue();
-            console.log(code);
-
-        }
-    }
+    // function onSubmit() {
+    //     if(done==false){
+    //         done=true;
+    //         var code=editor.getValue();
+    //         console.log(code);
+    //
+    //     }
+    // }
 
     // blocking inspect element via f12
     $(document).keydown(function(e){

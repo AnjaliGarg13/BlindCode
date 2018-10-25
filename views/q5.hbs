@@ -77,6 +77,8 @@
             Explanation
             </b>
             No matter what operations are performed, one friend will always have 2 units of money.
+            <br><br><br>
+            <b>PeakTime : 10 seconds</b>
 
         </div>
     </div>
@@ -84,7 +86,7 @@
 </div>
 <br><br>
 <form method="post" action="/question/ques5">
-    <input id="editor">
+    <input id="editor" name="q5code">
     <br>
     <br>
     <button type="button" onClick="onClick()">SHOW SCREEN</button>
@@ -112,7 +114,7 @@
             document.getElementsByClassName('CodeMirror')[0].style.color= 'black';
             setTimeout(function () {
                 document.getElementsByClassName('CodeMirror')[0].style.color= 'white';
-            },5000)
+            },10000)
             clicks += 1;
             document.getElementById("clicks").innerHTML = clicks;
         }

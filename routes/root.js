@@ -28,7 +28,7 @@ route.post('/signup',(req,res)=>{
         name:req.body.name,
         college: req.body.college,
         username: req.body.username,
-        password: req.body.password
+        password: req.body.password,
     }).then((createdUser)=>{
         res.redirect('/user/login')
     })
