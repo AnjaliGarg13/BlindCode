@@ -1,4 +1,3 @@
 ## BlindCode
 
-fork the repositry and just run server.js
-server would be started at http://localhost:3333
+The site is hosted at https://blindcode-innovision.herokuapp.com

@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+/db.js
+/codeCompileRun.js
+/views/q1.hbs
+/views/q2.hbs
+/views/q3.hbs
+/views/q4.hbs
+/routes/questio.js
